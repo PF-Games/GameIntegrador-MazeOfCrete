@@ -1,0 +1,47 @@
+import wollok.game.*
+import personajes.*
+import elementos.*
+import juego.*
+import laberintos.*
+import pantalla.*
+
+
+test"player obtiene la llaver"{
+	juego.dificultadExtrema(true)
+	laberinto.numero(2)
+	llave.chocarCon(player)
+	assert.equals(100,score.puntaje())
+}
+
+test "el juego comienza y spartan tiene 8 salud"{
+	
+	assert.equals(8, player.salud())
+	
+}
+
+test "spartan perder salud"{
+	player.salud(8)
+	player.perderSalud(1)
+	assert.equals(7, player.salud())
+	
+}
+
+/*
+
+test "comprar vida en modo normal"{
+	score.puntaje() = 5000
+	player.vidas() = 2
+	
+}
+
+
+test "comprar vida en modo extremo"{
+
+}
+
+test "player esta invencible y no pierde vidas"{
+	player.invencible() = true
+	
+	
+}
+*/

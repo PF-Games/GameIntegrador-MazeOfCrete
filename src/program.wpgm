@@ -1,0 +1,13 @@
+import wollok.game.*
+import juego.*
+import personajes.*
+import pantalla.*
+import elementos.*
+
+program maze {
+
+	juego.iniciar()
+	
+	game.start()
+
+}
